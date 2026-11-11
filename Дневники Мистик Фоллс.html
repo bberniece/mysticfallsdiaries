@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Дневники Мистик Фоллс</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=PT+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--k:#0B0A0A;--c:#171515;--bd:#541923;--w:#741E2B;--g:#1b0f12;--au:#B49A65;--p:#e6d7b2;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{background:var(--k);color:#cfc6b2;font:20px/1.7 'Cormorant Garamond',Georgia,serif;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.09;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:calc(1.1rem + env(safe-area-inset-top,0px)) 5vw 1.1rem;font:12px 'Playfair Display SC',serif;letter-spacing:.16em;text-transform:uppercase}
+nav::before{content:'';position:absolute;inset:0;z-index:-1;background:#070707e8;backdrop-filter:blur(8px);border-bottom:1px solid #b8975a33;opacity:0;transition:.6s}
+nav.s::before{opacity:1}
+nav ul{display:flex;gap:1.6rem;list-style:none;padding:0}
+nav a{text-decoration:none;color:#d8ccb0;transition:.3s}nav a:hover{color:var(--au)}
+#bt{display:none;background:none;border:0;width:34px;height:20px;position:relative;z-index:2;cursor:pointer}
+#bt i{position:absolute;left:0;right:0;height:1px;background:var(--au);transition:.4s}#bt i:first-child{top:4px}#bt i:last-child{bottom:4px}
+nav.o #bt i:first-child{top:9px;transform:rotate(45deg)}nav.o #bt i:last-child{bottom:10px;transform:rotate(-45deg)}
+@media(max-width:1000px){#bt{display:block}nav ul{position:fixed;inset:0;background:#070707f4;flex-direction:column;justify-content:center;align-items:center;font-size:15px;opacity:0;pointer-events:none;transition:.5s}nav.o ul{opacity:1;pointer-events:auto}}
+.sc{position:absolute;inset:0;overflow:hidden}.sc svg{width:100%;height:100%;display:block}
+.rv{opacity:0;transform:translateY(34px);filter:blur(4px);transition:opacity 1.3s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform 1.3s cubic-bezier(.2,.7,.2,1) var(--d,0s),filter 1.3s var(--d,0s)}
+.rv.in{opacity:1;transform:none;filter:none}
+#top,.fin{position:relative;height:100svh;min-height:620px;display:grid;place-items:center;text-align:center;overflow:hidden;padding:0 6vw}
+#top .sc,.fin .sc{inset:-10% 0}
+.vg{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,#000c 100%),linear-gradient(to top,var(--k),transparent 35%)}
+.mist{position:absolute;left:-50%;width:200%;height:45%;bottom:6%;background:radial-gradient(ellipse at 30% 50%,#c8d2be22,transparent 60%),radial-gradient(ellipse at 75% 40%,#c8d2be1a,transparent 55%);animation:dr 45s linear infinite alternate}
+@keyframes dr{to{transform:translateX(20%)}}
+.hc{position:relative;z-index:2}
+.hc small,.e{font:13px 'PT Mono',monospace;letter-spacing:.3em;text-transform:uppercase;color:var(--au)}
+h1,h2{font-family:'Playfair Display SC',serif;font-weight:400;text-transform:uppercase;color:#efe6cf}
+h1{font-size:clamp(2rem,7vw,6.2rem);line-height:1.05;letter-spacing:.14em;margin:1.2rem 0;text-shadow:0 4px 40px #000}
+h1 span{display:block;font-size:.42em;letter-spacing:.7em;color:var(--au);margin-top:.4rem}
+.tag{font-style:italic;font-size:clamp(1.2rem,2.4vw,1.8rem);max-width:640px;margin:0 auto 2.4rem;color:#d8ccb0}
+.btn{display:inline-block;padding:1rem 1.8rem;border:1px solid var(--au);font:12px 'Playfair Display SC',serif;letter-spacing:.28em;text-decoration:none;text-transform:uppercase;color:#efe6cf;position:relative;overflow:hidden;transition:.5s}
+.btn:hover{background:var(--w);border-color:#a8727a;letter-spacing:.36em}
+section{position:relative}.sec{padding:clamp(5rem,12vw,10rem) 5vw}
+.h{text-align:center;margin-bottom:clamp(2.5rem,6vw,5rem)}
+h2{font-size:clamp(1.9rem,4.6vw,3.8rem);letter-spacing:.14em;line-height:1.15;margin-top:.6rem}
+.or{width:140px;height:1px;background:linear-gradient(90deg,transparent,var(--au),transparent);margin:1.6rem auto 0}
+#town{background:linear-gradient(var(--k),var(--g) 160%)}
+.wl{display:grid;grid-template-columns:1fr;max-width:760px;margin:auto}
+.wl p{margin-bottom:1.2rem}.wl p:first-of-type::first-letter{float:left;font:4rem/.8 'Playfair Display SC';color:var(--au);padding:.5rem .7rem 0 0}
+.fx{display:flex;gap:2.5rem;margin-top:2rem;border-top:1px solid #b8975a44;padding-top:1.4rem;flex-wrap:wrap}
+.fx b{display:block;font:400 1.7rem 'Playfair Display SC';color:var(--au)}.fx span{font:11px 'PT Mono';letter-spacing:.25em;text-transform:uppercase}
+@media(max-width:900px){.wl{grid-template-columns:1fr}}
+#sup{background:var(--c)}
+.cards{display:flex;gap:6px;height:80vh;min-height:540px;max-width:1500px;margin:auto}
+.card{position:relative;flex:1;overflow:hidden;cursor:pointer;border:1px solid #b8975a33;transition:flex 1s cubic-bezier(.2,.7,.2,1),border-color .6s}
+.card.on{flex:3;border-color:var(--au)}
+.card .sc svg{transition:transform 2s,filter 1s;filter:saturate(.75) brightness(.85)}.card.on .sc svg,.card:hover .sc svg{transform:scale(1.1);filter:none}
+.card::after{content:'';position:absolute;inset:0;background:linear-gradient(#5a141c99,#16241c99);mix-blend-mode:multiply;transition:opacity 1s;pointer-events:none}.card.on::after{opacity:0}
+.ct{position:absolute;left:0;right:0;bottom:0;padding:1.6rem;z-index:2;background:linear-gradient(transparent,#000e 60%)}
+.ct small{font:11px 'PT Mono';letter-spacing:.3em;color:var(--au)}
+.ct h3{font:400 1.05rem 'Playfair Display SC';letter-spacing:.1em;text-transform:uppercase;color:#efe6cf;margin:.3rem 0}
+.sym{width:44px;height:44px;stroke:var(--au);fill:none;stroke-width:1.4;display:block;margin-bottom:.8rem}
+.d{max-height:0;opacity:0;overflow:hidden;transition:max-height .9s,opacity .9s .15s;line-height:1.45}.card.on .d{max-height:240px;opacity:1}
+.d p{font-size:1.15rem}.d em{display:block;margin-top:.7rem;padding-top:.7rem;border-top:1px solid #b8975a66;color:var(--au);font-size:1rem}
+@media(max-width:800px){.cards{flex-direction:column;height:auto}.card{flex:none;height:150px;transition:height .8s}.card.on{height:440px}}
+#gal{background:#0a0d0b}
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:260px;gap:10px;max-width:1300px;margin:auto}
+.gal figure{position:relative;overflow:hidden;grid-column:span 3}.gal figure:nth-child(1){grid-row:span 2}.gal figure:nth-child(4){grid-column:span 2}.gal figure:nth-child(5){grid-column:span 4}
+.gal .sc svg{transition:transform 2.2s cubic-bezier(.2,.7,.2,1)}.gal figure:hover .sc svg{transform:scale(1.14)}
+.gal figcaption{position:absolute;inset:auto 0 0;padding:2rem 1.6rem 1.4rem;background:linear-gradient(transparent,#000e);transform:translateY(100%);opacity:0;transition:.8s cubic-bezier(.2,.7,.2,1)}
+.gal figure:hover figcaption{transform:none;opacity:1}
+.gal h3{font:400 1.2rem 'Playfair Display SC';letter-spacing:.22em;text-transform:uppercase;color:#efe6cf}.gal figcaption p{font-style:italic;color:var(--au)}
+@media(hover:none){.gal figcaption{transform:none;opacity:1}}
+@media(max-width:800px){.gal{grid-template-columns:1fr;grid-auto-rows:240px}.gal figure,.gal figure:nth-child(n){grid-column:auto;grid-row:auto}}
+#fam{background:radial-gradient(ellipse at top,#2a0d12,var(--k) 70%)}
+.arch{max-width:1200px;margin:auto;padding:clamp(2rem,5vw,4.5rem);color:#d8cfb8;position:relative;background:linear-gradient(160deg,#171515f2,#0B0A0Af2);border:1px solid #B49A6566;box-shadow:inset 0 0 0 8px #0B0A0A,inset 0 0 0 9px #B49A6555,0 40px 100px #000}
+.arch>header{text-align:center;border-bottom:1px solid #B49A6588;padding-bottom:1.4rem;margin-bottom:2.5rem;font-family:'PT Mono';letter-spacing:.25em;text-transform:uppercase;font-size:.95rem}
+.stamp{position:absolute;right:4%;top:2.2rem;transform:rotate(12deg);border:3px solid #7a1d26aa;color:#7a1d26aa;font:13px 'PT Mono';letter-spacing:.2em;padding:.4rem .9rem;text-transform:uppercase}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:2.4rem 2rem}
+.fm{text-align:center;transition:transform .7s}.fm:nth-child(odd){transform:rotate(-1.3deg)}.fm:nth-child(even){transform:rotate(1.1deg)}.fm:hover{transform:translateY(-8px) rotate(0)}
+.ph{width:130px;margin:0 auto 1rem;background:#f3ead2;padding:6px 6px 14px;box-shadow:0 8px 18px #3a2a1a77;filter:sepia(.9) contrast(1.05)}.ph svg{display:block;width:100%}
+.cr{width:34px;height:40px;margin:0 auto .3rem;stroke:#B49A65;fill:none;stroke-width:1.4;display:block}
+.fm h3{font:600 1.35rem 'Playfair Display SC';letter-spacing:.14em;text-transform:uppercase}.fm i{display:block;line-height:1.3;margin:.3rem 0}.fm small{font:11px 'PT Mono';letter-spacing:.2em;text-transform:uppercase;color:#B49A65}
+@media(max-width:700px){.stamp{position:static;display:inline-block;margin-bottom:1rem}}
+#sec{background:linear-gradient(var(--k),var(--g) 50%,var(--k));overflow:hidden}
+.q{max-width:1000px;margin:0 auto clamp(3.5rem,8vw,6.5rem);position:relative;padding-bottom:1.6rem}.q:nth-child(even){text-align:right}
+.q b{display:block;font:400 .9rem 'Playfair Display SC';letter-spacing:.4em;color:var(--au)}
+.q p{font:italic 400 clamp(1.8rem,5.2vw,4rem)/1.15 'Cormorant Garamond';color:#e3d8bd;transition:color .6s,letter-spacing .8s,text-shadow .8s}.q:hover p{color:#d9b26a;letter-spacing:.02em;text-shadow:0 0 40px #5a141c}
+.q::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:linear-gradient(90deg,var(--au),transparent);transition:width 2s .4s}.q:nth-child(even)::after{left:auto;right:0;background:linear-gradient(270deg,var(--au),transparent)}.q.in::after{width:55%}
+.fin h2{font-size:clamp(2rem,6.4vw,5.5rem);letter-spacing:.12em;text-shadow:0 4px 40px #000}.fin h2 span{display:block;color:var(--au)}
+.fin p.t{font:italic clamp(1.3rem,3vw,2.2rem)/1.3 'Cormorant Garamond';margin-top:2rem}
+.fin footer{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:1rem 5vw calc(1.2rem + env(safe-area-inset-bottom,0px));font:11px 'PT Mono';letter-spacing:.25em;text-transform:uppercase;color:#8a8270;text-align:center}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none;filter:none}html{scroll-behavior:auto}}
+
+.sc svg{filter:saturate(.6)}.sc::after{content:'';position:absolute;inset:0;background:#541923;mix-blend-mode:soft-light;opacity:.4;pointer-events:none}
+#explore{background:radial-gradient(ellipse at 50% 0,#541923aa,transparent 60%),var(--k)}
+.sub{font-style:italic;font-size:clamp(1.2rem,2.4vw,1.7rem);margin-top:1rem;color:#d8ccb0}
+.mp{max-width:1400px;margin:0 auto 4.5rem;position:relative}
+.mv{position:relative;overflow:hidden;aspect-ratio:10/7;background:#0B0A0A;border:1px solid #B49A6577;box-shadow:0 0 0 6px #0B0A0A,0 0 0 7px #B49A6544,0 40px 100px #000}.mv svg{display:block;width:100%;height:100%}
+.mk{cursor:pointer}.mk .r{fill:#741E2B;stroke:#B49A65;stroke-width:1.5;transition:.4s}.mk text{font:600 8px Playfair Display SC,serif;fill:#efe6cf;text-anchor:middle;pointer-events:none}
+.mk:hover .r,.mk.hl .r{fill:#a02a3c;stroke:#f0dca0}.mk.on .r{fill:#B49A65;stroke:#fff}.mk.on text{fill:#0B0A0A}
+.mk .pl{fill:none;stroke:#B49A65;opacity:0}.mk.on .pl{animation:pl 2s infinite}@keyframes pl{0%{r:9;opacity:.9}100%{r:34;opacity:0}}
+.mk .lb{font:12px Playfair Display SC,serif;letter-spacing:.12em;fill:#efe6cf;paint-order:stroke;stroke:#0B0A0A;stroke-width:3px;opacity:0;transition:.4s}.mk:hover .lb,.mk.hl .lb,.mk.on .lb{opacity:1}
+.st{font:11px Playfair Display SC,serif;letter-spacing:.4em;fill:#B49A65;opacity:.45}
+.al{position:absolute;top:1.2rem;right:1.2rem;z-index:3;background:#0B0A0Acc;border:1px solid var(--au);color:#efe6cf;font:11px Playfair Display SC,serif;letter-spacing:.3em;text-transform:uppercase;padding:.7rem 1.2rem;cursor:pointer;transition:.4s}.al:hover{background:var(--w)}
+.pu{position:absolute;left:1.4rem;bottom:1.4rem;z-index:4;width:min(380px,calc(100% - 2.8rem));background:#0B0A0Aee;backdrop-filter:blur(10px);border:1px solid var(--au);animation:up .7s both}@keyframes up{from{opacity:0;transform:translateY(20px)}}
+.pi{position:relative;height:190px;overflow:hidden}.pb{padding:1.2rem 1.4rem 1.5rem}.pb h3{font:400 1.4rem Playfair Display SC,serif;letter-spacing:.14em;text-transform:uppercase;color:#efe6cf;margin:.3rem 0 .5rem}.pb p{font-size:1.1rem;line-height:1.5}
+.pu .x{position:absolute;top:.6rem;right:.6rem;z-index:5;width:34px;height:34px;border:1px solid var(--au);background:#0B0A0Acc;color:#efe6cf;font-size:20px;cursor:pointer}.pu .x:hover{background:var(--w)}
+.cat{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;max-width:1400px;margin:auto}
+.lc{position:relative;min-height:320px;overflow:hidden;cursor:pointer;background:var(--c);isolation:isolate;transition:box-shadow .6s}.lc:nth-child(8){min-height:380px}
+.lc .sc svg{transition:transform 2s cubic-bezier(.2,.7,.2,1),filter .8s;filter:brightness(.7) saturate(.7)}.lc:hover .sc svg,.lc.on .sc svg{transform:scale(1.12);filter:brightness(.95)}
+.lc::before{content:'';position:absolute;inset:10px;border:1px solid #B49A6566;z-index:3;transition:.6s;pointer-events:none}.lc:hover::before,.lc.on::before{inset:16px;border-color:var(--au)}
+.lc .g{position:absolute;inset:0;z-index:1;background:linear-gradient(#0B0A0A99,transparent 40%,#0B0A0Aee)}.lc.on{box-shadow:0 0 0 1px var(--au),0 0 50px #741E2B99}
+.lc .n{position:absolute;top:1.3rem;left:1.8rem;z-index:4;font:400 3.6rem/1 Playfair Display SC,serif;color:#741E2B;-webkit-text-stroke:1px #B49A6599}.lc:nth-child(4n) .n{left:auto;right:1.8rem}
+.lc .t{position:absolute;left:1.8rem;right:1.8rem;bottom:1.6rem;z-index:4}.lc:nth-child(3n+2) .t{text-align:right}
+.lc h3{font:400 1.2rem Playfair Display SC,serif;letter-spacing:.18em;text-transform:uppercase;color:#efe6cf}.lc p{max-height:0;opacity:0;overflow:hidden;font-size:1.05rem;line-height:1.4;transition:max-height .8s,opacity .8s}.lc:hover p,.lc.on p{max-height:130px;opacity:1;margin-top:.5rem}
+@media(hover:none){.lc p{max-height:none;opacity:1;margin-top:.5rem}}
+@media(max-width:800px){.cat{grid-template-columns:1fr}.lc,.lc:nth-child(8){grid-column:auto!important;min-height:270px}.pu{position:static;width:auto;margin-top:10px}.al{font-size:9px;padding:.5rem .7rem;top:.6rem;right:.6rem}}
+</style></head><body>
+<nav id="nv"><a href="#top">Мистик Фоллс</a><button id="bt" aria-label="Меню"><i></i><i></i></button>
+<ul><li><a href="#town">Город</a></li><li><a href="#explore">Карта</a></li><li><a href="#sup">Сверхъестественное</a></li><li><a href="#gal">Места</a></li><li><a href="#fam">Семьи</a></li><li><a href="#sec">Тайны</a></li></ul></nav>
+
+<section id="top"><div class="sc" data-k="hero" data-p=".3"></div><div class="mist"></div><div class="vg"></div>
+<div class="hc" data-p="-.12"><small class="rv in">Мистик Фоллс, Вирджиния</small>
+<h1 class="rv in" style="--d:.3s">Mystic Falls<span>Diaries</span></h1>
+<p class="tag rv in" style="--d:.7s">«Какую тайну скрываешь ты?»</p>
+<a class="btn rv in" style="--d:1.1s" href="#town">Войти в Мистик Фоллс</a></div></section>
+
+<section id="town" class="sec"><div class="h rv"><span class="e">Городской архив</span><h2>Добро пожаловать в Мистик Фоллс</h2><div class="or"></div></div>
+<div class="wl"><div class="rv"><p>Мистик Фоллс — виргинский городок с белыми верандами, кирпичными фасадами и церковными колоколами, которые до сих пор отбивают часы. Соседи машут с крыльца. Здесь все знают твоё имя, имя твоей матери и то, что сделала твоя бабушка летом шестьдесят четвёртого.</p><p>Но у города есть вторая бухгалтерская книга. Под памятными табличками основателей и осенними праздниками, под боем часов и старыми туннелями кто-то древний продолжает наблюдать. У каждой улицы есть память. У каждой памяти есть цена.</p>
+<div class="fx"><div><b>1860</b><span>Основан</span></div><div><b>5</b><span>Семей-основателей</span></div><div><b>Всегда</b><span>Открыт после заката</span></div></div></div></div></section>
+
+<section id="explore" class="sec"><div class="h rv"><span class="e">Картографический зал</span><h2>Исследуй Мистик Фоллс</h2><p class="sub">«Каждая улица хранит историю. Каждое место хранит тайну.»</p><div class="or"></div></div><div id="ex" class="rv"></div></section>
+<section id="sup" class="sec"><div class="h rv"><span class="e">Архив</span><h2>Сверхъестественное</h2><div class="or"></div></div><div class="cards rv" id="cards"></div></section>
+<section id="gal" class="sec"><div class="h rv"><span class="e">Полевые заметки</span><h2>Город никогда не спит</h2><div class="or"></div></div><div class="gal" id="gl"></div></section>
+<section id="fam" class="sec"><div class="h rv"><span class="e">Опечатанные записи ратуши</span><h2>Семьи основателей</h2><div class="or"></div></div>
+<div class="arch rv"><div class="stamp">В архиве · Не выносить</div><header>Реестр семей основателей · 1860</header><div class="fg" id="fg"></div></div></section>
+<section id="sec" class="sec"><div class="h rv"><span class="e">Последние записи</span><h2>Некоторые тайны не умирают</h2><div class="or"></div></div>
+<div id="qs"></div></section>
+
+<section class="fin"><div class="sc" data-k="fin" data-p=".25"></div><div class="mist"></div><div class="vg"></div>
+<div class="hc"><h2 class="rv">The night is young.<span>The secrets are older.</span></h2><p class="t rv" style="--d:.5s">Some stories never end.</p></div>
+<footer>Дневники Мистик Фоллс · Неофициальная дань уважения</footer></section>
+
+<script>
+const R=s=>()=>(s=Math.sin(s)*1e4,s-Math.floor(s));
+const pines=(r,n,y,h,f,o)=>{let d='';for(let i=0;i<n;i++){const x=i*(440/n)-20+r()*20,H=h*(.6+r()*.7),w=H*.15;for(let k=0;k<3;k++){const t=y-H+k*H*.27,v=w*(1+k*.55);d+=`M${x-v} ${t+H*.38}L${x} ${t}L${x+v} ${t+H*.38}Z`}d+=`M${x-2} ${y}h4v-${H*.2}h-4z`}return`<path fill="${f}" opacity="${o}" d="${d}"/><rect y="${y-1}" width="400" height="${301-y}" fill="${f}" opacity="${o}"/>`};
+const town=(r,y,h,f,o)=>{let d='',w='';for(let x=-10;x<420;){const bw=22+r()*28,bh=h*(.5+r()*.8);d+=`M${x} ${y}V${y-bh}h${bw}V${y}z`;for(let j=0;j<4;j++)if(r()>.65)w+=`<rect x="${x+4+r()*(bw-10)}" y="${y-bh+8+r()*(bh-18)}" width="3" height="5" fill="#c9a24e" opacity=".8"/>`;x+=bw+2}return`<path d="${d}" fill="${f}" opacity="${o}"/>${w}<rect y="${y-1}" width="400" height="${301-y}" fill="${f}" opacity="${o}"/>`};
+const wins=(xs,ys,w,h,r,c)=>xs.map(x=>ys.map(y=>r()>.4?`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c||'#d9a441'}" opacity=".85"/>`:'').join('')).join('');
+const house=(f,r)=>`<path fill="${f}" d="M95 262V176l30-22 25 22 25-54 25 54 30-22 30 22v86z"/><path fill="${f}" d="M118 160v-26h9v30zM270 158v-30h9v34z"/>${wins([112,150,200,240,284],[190,226],7,12,r)}`;
+const candles=()=>[60,110,160,250,320].map((x,i)=>{const y=232+(i%2)*14;return`<circle cx="${x}" cy="${y}" r="16" fill="#b8975a" opacity=".13"/><ellipse cx="${x}" cy="${y}" rx="1.8" ry="4" fill="#f0d58a"/><rect x="${x-2}" y="${y+4}" width="4" height="${16-(i%2)*8}" fill="#d8ccb0" opacity=".8"/>`}).join('');
+const graves=r=>{let s='';for(let i=0;i<13;i++){const x=15+i*30+r()*10,y=262+r()*26,h=14+r()*10;s+=i%3?`<path fill="#05070680" d="M${x} ${y}v-${h}a6 6 0 0 1 12 0v${h}z"/>`:`<path stroke="#050706" stroke-width="3" d="M${x} ${y}v-${h+12}M${x-7} ${y-h}h14"/>`}return`<g>${s}</g>`};
+const tower='<path fill="#070a09" d="M185 262V122h30v140zM180 122l20-36 20 36z"/><circle cx="200" cy="140" r="8" fill="#c9a24e" opacity=".85"/><path fill="#070a09" d="M270 262v-30h46v30zM266 232h54l-27-18z"/>';
+const grill=(r)=>`<path fill="#0a0c0b" d="M70 262V176h270v86z"/><rect x="150" y="182" width="110" height="16" fill="#5a141c"/><rect x="156" y="186" width="98" height="8" fill="none" stroke="#c9a24e" stroke-width=".6"/>${wins([84,124,222,262,302],[210],28,34,r,'#d9a441')}`;
+const lamp='<path stroke="#050606" stroke-width="3" d="M200 262V196"/><circle cx="200" cy="194" r="30" fill="#d9a441" opacity=".16"/><circle cx="200" cy="194" r="4" fill="#f0d58a"/>';
+const steeple='<path fill="#050706" d="M300 262V170h24v92zM296 170l16-50 16 50z"/><path stroke="#050706" d="M312 120v-14M307 112h10"/>';
+const S={
+hero:{p:['#050404','#2b1b1e'],m:[[285,78,24]],L:[['p',215,130,'#0e1913',.9,10],['p',255,150,'#09110d',1,14],['p',300,120,'#040605',1,9]]},
+vamp:{p:['#12050a','#5a1620'],m:[[300,70,30,'#a3282f']],L:[['p',240,100,'#1a0a0c',.9,10],['h','#0a0405'],['p',300,150,'#050203',1,8]]},
+wolf:{p:['#07100e','#2e4034'],m:[[200,95,50]],L:[['p',235,150,'#0d1812',1,12],['p',300,200,'#040706',1,8]]},
+witch:{p:['#0a0f0c','#1d2b22'],m:[[90,60,12]],L:[['p',235,130,'#0c140f',1,12],['x',candles()],['p',305,160,'#050806',1,7]]},
+human:{p:['#0b0d0e','#2a2f2c'],m:[[320,60,14]],L:[['t',250,90,'#0f1211',1],['x',lamp],['t',300,60,'#050606',1]]},
+hyb:{p:['#0b0a0a','#3a1a1c'],m:[[168,100,42],[214,100,42,'#7a1d26']],L:[['p',240,140,'#100c0c',1,11],['p',300,170,'#050404',1,8]]},
+grill:{p:['#0a0c0b','#262a26'],m:[[330,50,10]],L:[['t',230,70,'#0e100f',1],['g'],['t',300,50,'#040505',1]]},
+woods:{p:['#050a08','#2a3b31'],m:[[260,70,16]],L:[['p',190,110,'#101c16',.8,10],['p',240,150,'#0a130e',1,12],['p',300,200,'#040605',1,8]]},
+sq:{p:['#0b100e','#38453b'],m:[[90,60,16]],L:[['t',250,70,'#101512',1],['x',tower],['t',300,50,'#050707',1]]},
+cem:{p:['#090c0b','#2c382f'],m:[[300,60,20]],L:[['p',240,110,'#101a14',1,9],['c'],['p',310,150,'#040605',1,6]]},
+est:{p:['#0c0a0a','#3c2a24'],m:[[320,60,22]],L:[['p',250,110,'#14100e',1,10],['h','#050404'],['p',305,140,'#030303',1,8]]},
+fin:{p:['#050706','#2b3a31'],m:[[320,70,30]],L:[['t',230,100,'#0d1411',.9],['x',steeple],['t',270,90,'#070b09',1],['t',305,60,'#030404',1]]}};
+let U=0;
+function mk(k){const c=S[k],i='g'+U++,r=R(k.length*7+3);let s=`<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="${i}a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c.p[0]}"/><stop offset="1" stop-color="${c.p[1]}"/></linearGradient><radialGradient id="${i}m"><stop offset="0" stop-color="#efe6cb" stop-opacity=".45"/><stop offset="1" stop-color="#efe6cb" stop-opacity="0"/></radialGradient><linearGradient id="${i}f" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#cfd6c8" stop-opacity=".25"/><stop offset="1" stop-color="#cfd6c8" stop-opacity="0"/></linearGradient></defs><rect width="400" height="300" fill="url(#${i}a)"/>`;
+c.m.forEach(([x,y,q,f])=>s+=`<circle cx="${x}" cy="${y}" r="${q*4}" fill="url(#${i}m)"/><circle cx="${x}" cy="${y}" r="${q}" fill="${f||'#ece3c8'}" opacity=".92"/>`);
+c.L.forEach(l=>{const t=l[0];s+=t=='p'?pines(r,l[5],l[1],l[2],l[3],l[4]):t=='t'?town(r,l[1],l[2],l[3],l[4]):t=='h'?house(l[1],r):t=='g'?grill(r):t=='c'?graves(r):l[1]});
+return s+`<rect y="140" width="400" height="160" fill="url(#${i}f)"/></svg>`}
+const sym={v:'<path d="M24 5S11 20 11 30a13 13 0 0 0 26 0C37 20 24 5 24 5z"/>',w:'<path d="M32 6a19 19 0 1 0 11 28A16 16 0 0 1 32 6z"/><path d="M8 8l8 8M13 6l8 8"/>',c:'<circle cx="24" cy="25" r="18"/><path d="M24 7l11 33L7 19h34L13 40z"/>',h:'<circle cx="24" cy="14" r="7"/><path d="M9 43c0-13 8-19 15-19s15 6 15 19z"/>',y:'<circle cx="17" cy="24" r="14"/><circle cx="31" cy="24" r="14"/>'};
+const cards=[['v','vamp','Вампиры','Бессмертие, жажда крови и память длиной в века.','Объект пережил всех свидетелей. Не приглашайте в дом.'],['w','wolf','Оборотни','Наследие, проклятие и связь с природой.','Связаны с луной. Обращение никогда не бывает мягким.'],['c','witch','Ведьмы','Древняя магия и знания поколений.','За каждое заклинание приходится платить. Книга долгов не закрывается.'],['h','human','Люди','Обычные люди в центре необычных событий.','Безоружны, ни о чём не подозревают — и почему-то именно они оказываются главными.'],['y','hyb','Гибриды','Две природы в одном теле.','Ни целиком одно, ни целиком другое. Абсолютно беспрецедентны.']];
+document.getElementById('cards').innerHTML=cards.map((c,i)=>`<article class="card${i?'':' on'}" tabindex="0"><div class="sc" data-k="${c[1]}"></div><div class="ct"><svg class="sym" viewBox="0 0 48 48">${sym[c[0]]}</svg><small>Дело № 0${i+1}</small><h3>${c[2]}</h3><div class="d"><p>${c[3]}</p><em>${c[4]}</em></div></div></article>`).join('');
+const gal=[['grill','Mystic Grill','Здесь каждый разговор подслушивают.'],['woods','The Woods','Не иди на звук.'],['sq','Founder’s Square','Часы говорят правду. Город — нет.'],['cem','The Old Cemetery','Не все, кто покоится, покоятся с миром.'],['est','The Salvatore Estate','Свет горит в комнатах, куда никто не входит.']];
+document.getElementById('gl').innerHTML=gal.map((g,i)=>`<figure class="rv" style="--d:${i*.12}s"><div class="sc" data-k="${g[0]}"></div><figcaption><h3>${g[1]}</h3><p>${g[2]}</p></figcaption></figure>`).join('');
+const fam=[['Сальваторе','Blood is a long memory.','Поместье и погреба','M17 26l13-12 13 12'],['Гилберт','Keep what is written.','Врачи и летописцы','M30 12v28M20 22h20'],['Локвуд','Hold the line.','Землевладельцы','M30 12l11 22H19zM30 34v8'],['Форбс','Keep the watch.','Закон и порядок','M30 12l4 10h10l-8 7 3 10-9-6-9 6 3-10-8-7h10z'],['Фелл','Heal what you can.','Медицина и милосердие','M30 12v30M18 24h24M24 12h12']];
+document.getElementById('fg').innerHTML=fam.map((f,i)=>`<div class="fm rv" style="--d:${i*.12}s"><div class="ph"><svg viewBox="0 0 100 120"><rect width="100" height="120" fill="#8a7050"/><circle cx="50" cy="${44+i%2*3}" r="${17+i%3}" fill="#3a2a1a"/><path d="M16 120c0-30 14-42 34-42s34 12 34 42z" fill="#2a1d12"/>${i%2?'<path d="M30 30h40v6H30z" fill="#1a120a"/>':''}</svg></div><svg class="cr" viewBox="0 0 60 60"><path d="M10 6h40v30c0 12-12 18-20 22-8-4-20-10-20-22z"/><path d="${f[3]}"/></svg><h3>${f[0]}</h3><i>“${f[1]}”</i><small>${f[2]}</small></div>`).join('');
+const qs=['The past is never really buried.','Blood remembers everything.','Not every monster has fangs.','Some secrets are better left in the dark.','Welcome home. Try to survive.'],rm=['I','II','III','IV','V'];
+document.getElementById('qs').innerHTML=qs.map((q,i)=>`<div class="q rv"><b>${rm[i]}.</b><p>${q}</p></div>`).join('');
+document.querySelectorAll('[data-k]').forEach(e=>e.innerHTML=mk(e.dataset.k));
+const rr=R(11);let wm='';for(let i=0;i<46;i++){const x=24+rr()*110,y=26+rr()*110;if(Math.hypot(x-112,y-112)>16)wm+=`M${x} ${y}l5 10h-10z`}(document.getElementById('wm')||{}).innerHTML=`<path d="${wm}"/>`;
+const nv=document.getElementById('nv');document.getElementById('bt').onclick=()=>nv.classList.toggle('o');nv.querySelectorAll('ul a').forEach(a=>a.onclick=()=>nv.classList.remove('o'));
+const cs=[...document.querySelectorAll('.card')];cs.forEach(c=>{const on=()=>{cs.forEach(x=>x.classList.toggle('on',x===c))};c.onmouseenter=on;c.onclick=on;c.onfocus=on});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+const ps=[...document.querySelectorAll('[data-p]')],rd=matchMedia('(prefers-reduced-motion:reduce)').matches;let tk=0;
+function up(){tk=0;nv.classList.toggle('s',scrollY>40);if(rd)return;ps.forEach(e=>{const b=e.parentElement.getBoundingClientRect();if(b.bottom<-200||b.top>innerHeight+200)return;e.style.transform=`translate3d(0,${-(b.top+b.height/2-innerHeight/2)*e.dataset.p}px,0)`})}
+addEventListener('scroll',()=>{tk||(tk=requestAnimationFrame(up))},{passive:true});up();
+</script><script>
+const q=R(9);
+const bl=(x,w,h,roof,r)=>`<rect y="261" width="400" height="39" fill="#030303"/><path fill="#050404" d="M${x} 262V${262-h}h${w}v${h}z${roof?`M${x-8} ${262-h}l${w/2+8} -${roof}l${w/2+8} ${roof}z`:''}"/>`+(r?wins(Array.from({length:Math.floor((w-10)/24)},(_,i)=>x+8+i*24),Array.from({length:Math.floor((h-16)/28)},(_,i)=>262-h+12+i*28),7,12,r):'');
+Object.assign(S,{tsq:S.sq,salv:S.est,
+lock:{p:['#0a0707','#4a1a22'],m:[[300,64,24]],L:[['p',245,110,'#150b0d',1,10],['h','#050303'],['p',305,140,'#030202',1,8]]},
+gilb:{p:['#0a0b0c','#2b2a2d'],m:[[310,60,14]],L:[['t',250,60,'#101011',1],['x',bl(120,150,70,45,q)],['p',305,120,'#030303',1,7]]},
+forbes:{p:['#0c0a0a','#34262a'],m:[[80,70,18]],L:[['p',245,100,'#120d0e',1,9],['x',bl(150,130,64,40,q)],['p',305,100,'#030303',1,7]]},
+school:{p:['#090a0b','#2a2c30'],m:[[330,55,12]],L:[['x',bl(55,290,78,0,q)],['p',305,100,'#030303',1,8]]},
+hosp:{p:['#0a0a0b','#30292d'],m:[[60,60,12]],L:[['x',bl(100,200,110,0,q)+'<path stroke="#741E2B" stroke-width="5" d="M200 166v20M190 176h20"/>'],['p',305,110,'#030303',1,7]]},
+police:{p:['#0a0a0b','#2a2a2e'],m:[[320,60,14]],L:[['x',bl(120,160,80,0,q)+'<circle cx="200" cy="184" r="5" fill="#d9a441"/>'],['p',305,100,'#030303',1,7]]},
+hall:{p:['#0a0809','#3a2428'],m:[[320,60,16]],L:[['t',250,50,'#0f0c0d',1],['x',bl(100,200,90,50,q)],['p',305,100,'#030303',1,6]]},
+bridge:{p:['#08090a','#2c2528'],m:[[250,70,26]],L:[['p',220,110,'#0f0c0d',1,10],['x','<rect y="236" width="400" height="9" fill="#040303"/><path stroke="#040303" stroke-width="2" stroke-dasharray="2 8" d="M0 228H400"/><path fill="#040303" d="M50 245h22v55H50zM170 245h22v55h-22zM290 245h22v55h-22z"/><rect y="272" width="400" height="28" fill="#1a1819"/>']]},
+falls:{p:['#070808','#2d2a2d'],m:[[330,50,16]],L:[['p',160,90,'#120e10',.8,8],['x','<path fill="#070506" d="M0 110h170l22 50v140H0zM330 90h70v210h-70z"/><rect x="176" y="112" width="150" height="170" fill="#d8d0c0" opacity=".2"/>'+[0,1,2,3,4,5].map(i=>`<path stroke="#d8d0c0" opacity=".35" d="M${190+i*24} 115v160"/>`).join('')+'<ellipse cx="250" cy="282" rx="110" ry="14" fill="#d8d0c0" opacity=".25"/>'],['p',305,140,'#030303',1,7]]},
+aband:{p:['#0a0708','#3a1c21'],m:[[120,70,22]],L:[['p',235,120,'#140c0e',1,11],['x',bl(130,150,76,50,null)+'<path stroke="#741E2B" stroke-width="2" d="M170 210l30 30M200 210l-30 30"/>'],['p',305,160,'#030203',1,8]]}});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script>
+const h=React.createElement,{useState,useRef,useEffect,useMemo}=React;
+const LOC=[['town-square','Town Square',500,350,'tsq','Центр города: фестивали, праздники, мероприятия Совета основателей и встречи, на которых все видят всех.'],
+['mystic-grill','Mystic Grill',585,392,'grill','Главный ресторан и бар города. Первые свидания, тихие признания и сплетни, что летят быстрее правды.'],
+['salvatore','Salvatore Boarding House',190,170,'salv','Старый семейный особняк за закрытыми дверями: тайные встречи, вечеринки, семейные ссоры и секретные советы.'],
+['lockwood','Lockwood Mansion',700,250,'lock','Резиденция одной из семей основателей. Пышные балы, городские события и погребённая история оборотней.'],
+['gilbert','Gilbert House',300,330,'gilb','Обычный американский дом, который снова и снова затрагивают необычные события.'],
+['forbes','Forbes House',360,230,'forbes','Дом семьи, связанной с полицией и безопасностью Мистик Фоллс.'],
+['high-school','Mystic Falls High School',360,430,'school','Уроки, танцы, соперничество и повседневная жизнь подростков в городе, который далёк от обычного.'],
+['hospital','Mystic Falls Hospital',640,470,'hosp','Несчастные случаи, нападения и необъяснимые происшествия рано или поздно попадают в эти коридоры.'],
+['police','Police Station',520,440,'police','Расследования исчезновений, нападений и всего, что остаётся за рамками официального отчёта.'],
+['cemetery','Mystic Falls Cemetery',290,570,'cem','Старые могилы семей основателей, ритуалы, полуночные встречи и тайны мёртвых.'],
+['wickery','Wickery Bridge',560,592,'bridge','Мост на окраине города для ночных разговоров, встреч и расследований.'],
+['falls','The Falls',800,110,'falls','Водопад и дикий берег для отдыха, встреч и уединения. После заката лес вокруг меняется.'],
+['woods','The Woods',190,400,'woods','Лес вокруг города: встречи, охота, поиски и побеги. Прежде всего — территория оборотней.'],
+['hall','Founder’s Hall',440,300,'hall','Здесь заседает Совет основателей: официальные события, споры о безопасности и разговоры о сверхъестественных угрозах.'],
+['abandoned','Old & Abandoned Places',810,570,'aband','Пустые дома, старые здания, подвалы и склады для тайных встреч, артефактов и нераскрытых загадок.']]
+.map((a,i)=>({id:a[0],n:String(i+1).padStart(2,'0'),name:a[1],x:a[2],y:a[3],k:a[4],d:a[5]}));
+const SP=[7,5,4,4,4,5,7,12,4,4,4,6,6,8,4];
+const RIV='M840 80C820 220 770 300 730 380S650 560 560 592S300 640 -20 600';
+const RD=['M0 360C250 340 400 370 500 350S800 340 1000 380','M500 20C510 200 490 300 500 350S520 520 560 592L580 720','M500 350C600 300 650 280 700 250','M300 330C250 250 230 200 190 170','M360 420C330 480 300 520 290 570','M585 390C620 420 635 450 640 470','M700 250C750 190 780 140 800 110','M560 592C680 600 760 590 810 570','M300 330C250 360 220 380 190 400'];
+const TR=(()=>{const r=R(5);let d='';[[0,0,320,120,40],[0,230,250,260,60],[560,0,440,90,50],[860,380,140,320,45],[0,620,420,80,30],[300,500,120,80,10],[880,150,120,200,25]].forEach(([x,y,w,k,n])=>{for(let i=0;i<n;i++)d+=`M${x+r()*w} ${y+r()*k}l6 14h-12z`});return d})();
+const HS=(()=>{const r=R(8);let d='';for(let i=0;i<60;i++)d+=`M${380+r()*280} ${270+r()*210}h9v7h-9z`;return d})();
+const e=(t,p,...c)=>h(t,p,...c);
+const BASE=h(React.Fragment,null,h('rect',{x:-2000,y:-2000,width:5000,height:5000,fill:'#0B0A0A'}),
+h('path',{d:'M0 100H1000M0 200H1000M0 300H1000M0 400H1000M0 500H1000M0 600H1000M100 0V700M200 0V700M300 0V700M400 0V700M500 0V700M600 0V700M700 0V700M800 0V700M900 0V700',stroke:'#B49A65',strokeOpacity:.07}),
+h('path',{d:TR,fill:'#3b2a2d',opacity:.75}),h('path',{d:HS,fill:'#2a2325',stroke:'#B49A65',strokeOpacity:.3,strokeWidth:.5}),
+h('path',{d:RIV,fill:'none',stroke:'#1f1d20',strokeWidth:24}),h('path',{d:RIV,fill:'none',stroke:'#B49A65',strokeOpacity:.35,strokeDasharray:'2 7'}),
+...RD.map((d,i)=>h('g',{key:i,fill:'none'},h('path',{d,stroke:'#171515',strokeWidth:8}),h('path',{d,stroke:'#B49A65',strokeOpacity:.55,strokeWidth:.9,strokeDasharray:i?'7 4':''}))),
+h('path',{d:'M820 70v30M832 66v34M844 70v30',stroke:'#d8d0c0',opacity:.5}),
+h('text',{className:'st',x:60,y:332},'ГЛАВНАЯ УЛИЦА'),h('text',{className:'st',x:520,y:150},'ДОРОГА ОСНОВАТЕЛЕЙ'),h('text',{className:'st',x:640,y:620},'ДОРОГА УИКЕРИ'),h('text',{className:'st',x:600,y:520,transform:'rotate(-35 600 520)'},'РЕКА МИСТИК'),
+h('g',{transform:'translate(900 640)',stroke:'#B49A65',fill:'none',opacity:.7},h('circle',{r:22}),h('path',{d:'M0-30V30M-30 0H30M0-22l5 22-5 22-5-22z'}),h('text',{y:-36,x:-4,style:{font:'10px Playfair Display SC',fill:'#B49A65',stroke:'none'}},'С')),
+h('text',{x:40,y:660,style:{font:'15px Playfair Display SC',letterSpacing:'.2em',fill:'#B49A65',opacity:.7}},'ГОРОД МИСТИК ФОЛЛС · ВИРДЖИНИЯ'),h('text',{x:40,y:680,style:{font:'10px PT Mono',letterSpacing:'.3em',fill:'#B49A65',opacity:.5}},'СЪЁМКА 1860 ГОДА'));
+function useMob(){const[m,s]=useState(matchMedia('(max-width:800px)').matches);useEffect(()=>{const q=matchMedia('(max-width:800px)'),f=()=>s(q.matches);q.addEventListener('change',f);return()=>q.removeEventListener('change',f)},[]);return m}
+function App(){
+const[selectedLocation,setSel]=useState(null),[open,setOpen]=useState(false),[hov,setHov]=useState(null),mob=useMob(),ref=useRef();
+const IM=useMemo(()=>Object.fromEntries(LOC.map(l=>[l.id,mk(l.k)])),[]);
+const pick=(id,fromCard)=>{setSel(id);setOpen(true);if(fromCard&&ref.current)ref.current.scrollIntoView({behavior:'smooth',block:mob?'start':'center'})};
+const L=LOC.find(l=>l.id===selectedLocation),z=L?(mob?3.2:2.6):1;
+const tx=L?Math.min(0,Math.max(1000-1000*z,(mob?500:620)-L.x*z)):0,ty=L?Math.min(0,Math.max(700-700*z,(mob?350:330)-L.y*z)):0;
+const T='transform 1.2s cubic-bezier(.65,0,.25,1)';
+return h(React.Fragment,null,
+h('div',{className:'mp',ref},h('div',{className:'mv'},
+selectedLocation&&h('button',{className:'al',onClick:()=>{setSel(null);setOpen(false)}},'Показать все локации'),
+h('svg',{viewBox:'0 0 1000 700',role:'img','aria-label':'Иллюстрированная карта Мистик Фоллс'},h('g',{style:{transform:`translate(${tx}px,${ty}px) scale(${z})`,transition:T}},BASE,
+LOC.map(l=>h('g',{key:l.id,className:'mk'+(selectedLocation===l.id?' on':'')+(hov===l.id?' hl':''),transform:`translate(${l.x} ${l.y})`,tabIndex:0,role:'button','aria-label':l.name,onClick:()=>pick(l.id),onKeyDown:ev=>ev.key==='Enter'&&pick(l.id),onMouseEnter:()=>setHov(l.id),onMouseLeave:()=>setHov(null)},
+h('g',{style:{transform:`scale(${(mob?2.2:1)/z})`,transition:T}},h('circle',{className:'pl',r:9}),h('circle',{r:20,fill:'transparent'}),h('circle',{className:'r',r:10}),h('text',{y:3},l.n),h('text',{className:'lb',y:-17},l.name))))))),
+L&&open&&h('aside',{className:'pu',key:L.id},h('button',{className:'x','aria-label':'Закрыть',onClick:()=>setOpen(false)},'×'),h('div',{className:'pi'},h('div',{className:'sc',dangerouslySetInnerHTML:{__html:IM[L.id]}})),h('div',{className:'pb'},h('span',{className:'e'},'Дело № '+L.n),h('h3',null,L.name),h('p',null,L.d)))),
+h('div',{className:'cat'},LOC.map((l,i)=>h('article',{key:l.id,className:'lc'+(selectedLocation===l.id?' on':''),style:{gridColumn:'span '+SP[i]},onMouseEnter:()=>setHov(l.id),onMouseLeave:()=>setHov(null),onClick:()=>pick(l.id,true)},
+h('div',{className:'sc',dangerouslySetInnerHTML:{__html:IM[l.id]}}),h('div',{className:'g'}),h('span',{className:'n'},l.n),h('div',{className:'t'},h('h3',null,l.name),h('p',null,l.d))))))}
+ReactDOM.createRoot(document.getElementById('ex')).render(h(App));
+</script>
+</body></html>
